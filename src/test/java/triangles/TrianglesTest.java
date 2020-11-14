@@ -1,4 +1,4 @@
-pgitackage triangles;
+package triangles;
 
 import org.junit.Test;
 
