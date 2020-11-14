@@ -13,6 +13,6 @@ public class TriangleSorter {
         } else if (sideC < longside){
             return "Triangle";
         }
-        return "";
+        return "Not A Triangle";
     }
 }
