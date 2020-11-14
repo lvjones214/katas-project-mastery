@@ -2,16 +2,16 @@ package triangles;
 
 public class TriangleSorter {
     public String analyze(int sideA, int sideB, int sideC) {
-        double c = 0;
+        double hypoteneuse = Math.sqrt((sideA*sideA)+(sideB*sideB));
+        int longside = sideA + sideB;
         if(sideA ==  sideB  && sideB == sideC){
             return "Equilateral";
         } else if (sideA == sideB || sideB == sideC || sideA == sideC){
             return "Isosceles";
-        } else if (sideC > sideB && sideC > sideA){
-            c = Math.sqrt((sideA*sideA)+(sideB*sideB));
-            if(c == sideC){
+        } else if (hypoteneuse == sideC) {
                 return "Right";
-            }
+        } else if (sideC < longside){
+            return "Triangle";
         }
         return "";
     }
