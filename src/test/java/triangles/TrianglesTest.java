@@ -18,4 +18,10 @@ public class TrianglesTest {
         String triangleType = underTest.analyze(5, 5, 3);
         assertThat(triangleType, is("Isosceles"));
     }
+    @Test
+    public void isARightTriangle(){
+        TriangleSorter underTest = new TriangleSorter();
+        String triangleType = underTest.analyze(3, 4, 5);
+        assertThat(triangleType, is("Right"));
+    }
 }
