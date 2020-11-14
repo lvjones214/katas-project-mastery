@@ -36,4 +36,17 @@ public class TrianglesTest {
         String triangleType = underTest.analyze(2,3,5);
         assertThat(triangleType, is("Not A Triangle"));
     }
+    @Test
+    public void orderOfSegmentsDoesNotChangeResult(){
+        TriangleSorter testIsosceles = new TriangleSorter();
+        String triangleType1 = testIsosceles.analyze(5, 3, 3);
+        TriangleSorter testRight = new TriangleSorter();
+        String triangleType2 = testRight.analyze(5, 4, 3);
+        TriangleSorter testTriangle = new TriangleSorter();
+        String triangleType3 = testTriangle.analyze(4,2,3);
+        assertThat(triangleType1, is ("Isosceles"));
+        assertThat(triangleType2, is("Right"));
+        assertThat(triangleType3, is("Triangle"));
+
+    }
 }
