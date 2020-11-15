@@ -28,26 +28,27 @@ public class FizzBuzz {
     }
 
     public String sing(Integer number) {
-        if(number % 4 == 0 && number % 5 ==0 && number % 11 == 0){
-            return "FizzBuzzBang";
-        }
-        if(number % 4 == 0  && number % 5 == 0){
-            return "FizzBuzz";
-        }
-        if(number % 4 == 0 && number % 11 == 0){
-            return "FizzBang";
-        }
-        if(number % 5 == 0 && number % 11 == 0){
-            return "BuzzBang";
-        }
+        String fizz = "Fizz";
+        String buzz = "Buzz";
+        String bang = "Bang";
+
         if(number % 4 == 0){
-            return "Fizz";
-        }
-        if(number % 5 == 0){
-            return "Buzz";
-        }
-        if(number % 11 == 0){
-            return "Bang";
+            if(number % 5 == 0){
+                if(number % 11 == 0){
+                    return fizz+buzz+bang;
+                }
+                return fizz+buzz;
+            } else if(number % 11 == 0){
+                return fizz+bang;
+            }
+            return fizz;
+        } else if( number % 5 ==0){
+            if(number % 11 == 0){
+                return buzz+bang;
+            }
+            return buzz;
+        } else if(number % 11 == 0){
+            return bang;
         }
         return ""+number;
     }
