@@ -28,6 +28,9 @@ public class FizzBuzz {
     }
 
     public String sing(Integer number) {
+        if(number % 4 == 0 && number % 5 ==0 && number % 11 == 0){
+            return "FizzBuzzBang";
+        }
         if(number % 4 == 0  && number % 5 == 0){
             return "FizzBuzz";
         }

@@ -144,4 +144,10 @@ public class FizzBuzzTest {
         String spokenWord1 = underTest.sing(55);
         assertThat(spokenWord1, is("BuzzBang"));
     }
+    @Test
+    public void whenGiven220FizzBuzzSingsFizzBuzzBang(){
+        FizzBuzz underTest = new FizzBuzz();
+        String spokenWord1 = underTest.sing(220);
+        assertThat(spokenWord1, is("FizzBuzzBang"));
+    }
 }
