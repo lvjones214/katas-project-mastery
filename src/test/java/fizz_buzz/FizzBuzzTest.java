@@ -62,4 +62,11 @@ public class FizzBuzzTest {
         String spokenWord = underTest.say(15);
         assertThat(spokenWord, is("FizzBuzz"));
     }
+    @Test
+    public void givenUpperAndLowerLimitsFizzBuzzReturnsList(){
+        FizzBuzz underTest = new FizzBuzz();
+        String spokenWordList = underTest.fizzBuzzList( 1,10);
+        assertThat(spokenWordList, is(" 1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz"));
+    }
+
 }
