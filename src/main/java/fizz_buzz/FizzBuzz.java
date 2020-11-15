@@ -34,6 +34,9 @@ public class FizzBuzz {
         if(number % 4 == 0 && number % 11 == 0){
             return "FizzBang";
         }
+        if(number % 5 == 0 && number % 11 == 0){
+            return "BuzzBang";
+        }
         if(number % 4 == 0){
             return "Fizz";
         }
