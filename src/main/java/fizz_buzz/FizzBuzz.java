@@ -26,4 +26,8 @@ public class FizzBuzz {
         }
         return wordList;
     }
+
+    public String sing(Integer number) {
+        return ""+number;
+    }
 }

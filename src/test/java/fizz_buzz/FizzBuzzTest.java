@@ -68,5 +68,14 @@ public class FizzBuzzTest {
         String spokenWordList = underTest.fizzBuzzList( 1,10);
         assertThat(spokenWordList, is(" 1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz"));
     }
-
+    @Test
+    public void whenGiven12Or3FizzBuzzSings12Or3(){
+        FizzBuzz underTest = new FizzBuzz();
+        String spokenWord1 = underTest.sing(1);
+        assertThat(spokenWord1, is("1"));
+        String spokenWord2 = underTest.sing(2);
+        assertThat(spokenWord2, is("2"));
+        String spokenWord3 = underTest.sing(3);
+        assertThat(spokenWord3, is("3"));
+    }
 }
