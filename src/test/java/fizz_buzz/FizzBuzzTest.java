@@ -20,56 +20,65 @@ public class FizzBuzzTest {
         String spokenWord = underTest.say(1);
         assertThat(spokenWord, is("1"));
     }
+
     @Test
     public void whenGiven2FizzBuzzSays2() {
         FizzBuzz underTest = new FizzBuzz();
         String spokenWord = underTest.say(2);
         assertThat(spokenWord, is("2"));
     }
+
     @Test
-    public void whenGiven3FizzBuzzSaysFizz(){
+    public void whenGiven3FizzBuzzSaysFizz() {
         FizzBuzz underTest = new FizzBuzz();
         String spokenWord = underTest.say(3);
-        assertThat(spokenWord, is ("Fizz"));
+        assertThat(spokenWord, is("Fizz"));
     }
+
     @Test
-    public void whenGiven4FizzBuzzSays4(){
+    public void whenGiven4FizzBuzzSays4() {
         FizzBuzz underTest = new FizzBuzz();
         String spokenWord = underTest.say(4);
         assertThat(spokenWord, is("4"));
     }
+
     @Test
-    public void whenGiven5FizzBuzzSaysBuzz(){
+    public void whenGiven5FizzBuzzSaysBuzz() {
         FizzBuzz underTest = new FizzBuzz();
         String spokenWord = underTest.say(5);
         assertThat(spokenWord, is("Buzz"));
     }
+
     @Test
-    public void whenGiven6FizzBuzzSaysFizz(){
+    public void whenGiven6FizzBuzzSaysFizz() {
         FizzBuzz underTest = new FizzBuzz();
         String spokenWord = underTest.say(6);
         assertThat(spokenWord, is("Fizz"));
     }
+
     @Test
-    public void whenGiven10FizzBuzzSaysBuzz(){
+    public void whenGiven10FizzBuzzSaysBuzz() {
         FizzBuzz underTest = new FizzBuzz();
         String spokenWord = underTest.say(10);
         assertThat(spokenWord, is("Buzz"));
     }
+
     @Test
-    public void whenGiven15FizzBuzzSaysFizzBuzz(){
+    public void whenGiven15FizzBuzzSaysFizzBuzz() {
         FizzBuzz underTest = new FizzBuzz();
         String spokenWord = underTest.say(15);
         assertThat(spokenWord, is("FizzBuzz"));
     }
+
     @Test
-    public void givenUpperAndLowerLimitsFizzBuzzReturnsList(){
+    public void givenUpperAndLowerLimitsFizzBuzzReturnsList() {
         FizzBuzz underTest = new FizzBuzz();
-        String spokenWordList = underTest.fizzBuzzList( 1,10);
+        String spokenWordList = underTest.fizzBuzzList(1, 10);
         assertThat(spokenWordList, is(" 1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz"));
     }
+
     @Test
-    public void whenGiven12Or3FizzBuzzSings12Or3(){
+    public void whenGiven12Or3FizzBuzzSings12Or3() {
         FizzBuzz underTest = new FizzBuzz();
         String spokenWord1 = underTest.sing(1);
         assertThat(spokenWord1, is("1"));
@@ -78,16 +87,25 @@ public class FizzBuzzTest {
         String spokenWord3 = underTest.sing(3);
         assertThat(spokenWord3, is("3"));
     }
+
     @Test
-    public void whenGiven4FizzBuzzSingsFizz(){
+    public void whenGiven4FizzBuzzSingsFizz() {
         FizzBuzz underTest = new FizzBuzz();
         String spokenWord1 = underTest.sing(4);
         assertThat(spokenWord1, is("Fizz"));
     }
+
     @Test
-    public void whenGiven5FizzBuzzSingsBuzz(){
+    public void whenGiven5FizzBuzzSingsBuzz() {
         FizzBuzz underTest = new FizzBuzz();
         String spokenWord1 = underTest.sing(5);
         assertThat(spokenWord1, is("Buzz"));
+    }
+
+    @Test
+    public void whenGiven8FizzBuzzSingsFizz() {
+        FizzBuzz underTest = new FizzBuzz();
+        String spokenWord1 = underTest.sing(8);
+        assertThat(spokenWord1, is("Fizz"));
     }
 }

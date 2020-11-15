@@ -28,7 +28,7 @@ public class FizzBuzz {
     }
 
     public String sing(Integer number) {
-        if(number == 4){
+        if(number % 4 == 0){
             return "Fizz";
         }
         if(number == 5){
