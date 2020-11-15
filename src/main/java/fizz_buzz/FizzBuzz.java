@@ -4,6 +4,9 @@ import java.util.Collection;
 
 public class FizzBuzz {
     public String say(Integer number) {
+        if(number < 0){
+            return "Negative Number Error";
+        }
         if(number % 3 == 0 && number % 5 == 0){
             return "FizzBuzz";
         }
@@ -32,6 +35,9 @@ public class FizzBuzz {
         String buzz = "Buzz";
         String bang = "Bang";
 
+        if(number < 0){
+            return "Negative Number Error";
+        }
         if(number % 4 == 0){
             if(number % 5 == 0){
                 if(number % 11 == 0){

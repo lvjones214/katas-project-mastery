@@ -150,4 +150,12 @@ public class FizzBuzzTest {
         String spokenWord1 = underTest.sing(220);
         assertThat(spokenWord1, is("FizzBuzzBang"));
     }
+    @Test
+    public void whenGivenNegativeNumberFizzBuzzSaysAndSingsNegativeNumberError(){
+        FizzBuzz underTest = new FizzBuzz();
+        String spokenWord1 = underTest.sing(-5);
+        assertThat(spokenWord1, is("Negative Number Error"));
+        String spokenWord2 = underTest.say(-5);
+        assertThat(spokenWord2, is("Negative Number Error"));
+    }
 }
