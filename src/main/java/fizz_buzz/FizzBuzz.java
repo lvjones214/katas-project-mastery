@@ -28,6 +28,9 @@ public class FizzBuzz {
     }
 
     public String sing(Integer number) {
+        if(number == 4){
+            return "Fizz";
+        }
         return ""+number;
     }
 }

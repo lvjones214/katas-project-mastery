@@ -78,4 +78,10 @@ public class FizzBuzzTest {
         String spokenWord3 = underTest.sing(3);
         assertThat(spokenWord3, is("3"));
     }
+    @Test
+    public void whenGiven4FizzBuzzSingsFizz(){
+        FizzBuzz underTest = new FizzBuzz();
+        String spokenWord1 = underTest.sing(4);
+        assertThat(spokenWord1, is("Fizz"));
+    }
 }
