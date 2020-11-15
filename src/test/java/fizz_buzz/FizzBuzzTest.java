@@ -56,4 +56,10 @@ public class FizzBuzzTest {
         String spokenWord = underTest.say(10);
         assertThat(spokenWord, is("Buzz"));
     }
+    @Test
+    public void whenGiven15FizzBuzzSaysFizzBuzz(){
+        FizzBuzz underTest = new FizzBuzz();
+        String spokenWord = underTest.say(15);
+        assertThat(spokenWord, is("FizzBuzz"));
+    }
 }
