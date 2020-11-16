@@ -22,7 +22,7 @@ public class BabySitterTest {
     public void oneHourPostBedTimeBeforeMidnightShouldPay8() {
         WageCalculator underTest = new WageCalculator();
         int wage = underTest.calculateShiftWage(21, 22, 20);
-        assertThat(wage, is(8));
+        assertThat(wage, is(9));
     }
     @Test
     public void oneHourPostBedTimeAfterMidnightShouldPay16() {
@@ -41,5 +41,11 @@ public class BabySitterTest {
         WageCalculator underTest = new WageCalculator();
         int wage = underTest.calculateShiftWage(20, 2, 21);
         assertThat(wage, is(68));
+    }
+    @Test
+    public void twoHoursAfterBedtimeAndBeforeMidnightPays18() {
+        WageCalculator underTest = new WageCalculator();
+        int wage = underTest.calculateShiftWage(21, 23, 20);
+        assertThat(wage, is(18));
     }
 }
