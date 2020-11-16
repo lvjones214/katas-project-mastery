@@ -18,4 +18,10 @@ public class BabySitterTest {
         int wage = underTest.calculateShiftWage(17, 19, 20);
         assertThat(wage, is(24));
     }
+    @Test
+    public void oneHourPostBedTimeBeforeMidnightShouldPay8() {
+        WageCalculator underTest = new WageCalculator();
+        int wage = underTest.calculateShiftWage(21, 22, 20);
+        assertThat(wage, is(8));
+    }
 }
