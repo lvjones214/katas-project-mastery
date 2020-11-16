@@ -13,7 +13,7 @@ public class WageCalculator {
                 wage = ((bedtime - startingHour) * 12) + ((24 - bedtime) * 8) + (endingHour * 16);
             }
         } else if(startingHour > bedtime){
-            if(endingHour < 24){
+            if(endingHour < 24 && endingHour > 17){
                 wage =(endingHour - startingHour)*8;
             }else{
                 wage = (24 - startingHour)*8 + endingHour*16;
